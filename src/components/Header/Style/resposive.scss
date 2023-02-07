@@ -1,4 +1,18 @@
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 767px) {
+    .toggle .line1 {
+        background-color: rgb(106, 106, 106);
+        transition: all 0.3s ease;
+        transform:  rotate(-43deg) translate(-1px , 10px);
+    }
+    .toggle .line2 {
+       opacity: 0;
+    }
+    .toggle .line3 {
+        background-color: rgb(106, 106, 106);
+        transition: all 0.3s ease;
+        transform:  rotate(44deg) translate(-0.4px , -10px);
+    }
+
     header {
         .container-menu-nav {
             ul {
@@ -12,34 +26,38 @@
                 margin: 0 !important;
                 flex-direction: column;
                 z-index: 100000;
-                backdrop-filter: blur(10px);
+                backdrop-filter: blur(30px);
                 transform: translateX(-400px);
-                transition: all 1s ease;
+        
                 li {
                     margin-top: 4em;
                 }
                 
             }
         }
-            
+        .container-info-header__right {
+            img {
+                display:none;
+            }
+        }  
     }
-    
-
     .container-burguer-btn{
         display: block;
+    }
+    .container-info-header__text-apresentation {
+        margin-left: 1.5em;
+    }
+    .container-info-header__btn-download {
+        width: 100%;
+        ul li {
+            width: 6em;
+            margin-right: 1.3em;
+        }
+        
     }
     
 }
 
-// width: 50% !important;
-// height: 100vh;
-// border: 1px solid green;
-// background-color: rgba(0, 0, 0, 0.344);
-// justify-content: flex-start  ;
-// position: absolute;
-// padding: 0 !important;
-// margin: 0 !important;
-// flex-direction: column;
-// z-index: 100000;
-// padding-top: 3em !important;
-// backdrop-filter: blur(10px);
+@media screen and (max-width : 768) {
+
+}

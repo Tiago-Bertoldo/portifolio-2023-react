@@ -13,14 +13,10 @@ export default  function Header() {
      const handleActiveBurguer = () => {
           activeBurguer ? setActiveburguer(false) : setActiveburguer(true)  ; 
           let activeBurguerEffect = document.querySelector('.container-menu-nav ul')
-          activeBurguerEffect.classList.toggle('active-menu-responsive')
-          
+          let animationBurguer = document.querySelector('.container-burguer-btn');
+          animationBurguer.classList.toggle('toggle')
+          activeBurguerEffect.classList.toggle('active-menu-responsive');
      }
-     
-
-
-     console.log(activeBurguer);
-
     return (
        <header id='header'>
           <div className="container-movie">
@@ -31,25 +27,25 @@ export default  function Header() {
           <div className="container-header">
               <nav className='container-menu-nav'>
                     <div onClick={() => handleActiveBurguer()} className="container-burguer-btn">
-                         <div className="burguer"></div>
-                         <div className="burguer"></div>
-                         <div className="burguer"></div>
+                         <div className="burguer line1"></div>
+                         <div className="burguer line2" ></div>
+                         <div className="burguer line3"></div>
                     </div>
                     <ul className='teste'>
                          <li>
                               <a href="#header">Home</a>
                          </li>
                          <li>
-                              <a href="#header">Competences</a>
+                              <a href="#competences">Competences</a>
                          </li>
                          <li>
-                              <a href="#header">Portifolio</a>
+                              <a href="#portifolio">Portifolio</a>
                          </li>
                          <li>
-                              <a href="#header">À propos</a>
+                              <a href="#aproros">À propos</a>
                          </li>
                          <li>
-                              <a href="#header">Contact</a>
+                              <a href="#contact">Contact</a>
                          </li>
                     </ul>
               </nav>
@@ -57,10 +53,10 @@ export default  function Header() {
                     <div className="container-info-header__left">
                               <div className="container-info-header__reseaux">
                                    <span>
-                                        <a href="https://www.linkedin.com/in/tiago-bertoldo-6021a61a8/"><AiFillLinkedin/></a>
+                                        <a href="https://www.linkedin.com/in/tiago-bertoldo-6021a61a8/" target="_blank" rel='noreferrer'><AiFillLinkedin/></a>
                                    </span>
                                    <span>
-                                        <a href="https://github.com/sadberto"><AiFillGithub/></a>
+                                        <a href="https://github.com/sadberto" target="_blank" rel='noreferrer'><AiFillGithub/></a>
                                    </span>
                               </div>
                               <div className="container-info-header__text-apresentation">

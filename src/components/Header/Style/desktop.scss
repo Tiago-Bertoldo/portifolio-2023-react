@@ -63,6 +63,12 @@ header {
                 text-decoration: none;
                 padding: 5px 10px;
                 color: $text-color;
+                &:hover {
+                    border-top: 1px solid $color-btn;
+                }
+            }
+            a:active {
+                border-top: 1px solid $color-btn;
             }
         }
     }
@@ -75,6 +81,7 @@ header {
     justify-content: space-between;
     &__left {
         margin: 3em 0 0 0;
+        padding: 1em;
         width: 40%;
         max-width: 340px;
         box-sizing: border-box;
@@ -96,6 +103,7 @@ header {
                     color : $color-btn;
                 }
             }
+           
         }
     }
     &__text-apresentation{
@@ -158,6 +166,7 @@ header {
                 &:hover {
                     color:$backgroundColor-blue;
                 } 
+               
             }
         }
 
@@ -184,10 +193,12 @@ header {
 }
 
 .active-menu-responsive {
-    transition: all 2s ease;
+    transition: all 0.5s ease;
     transform: translateX(0px) !important;
     
 }
+
+
 
 
 @keyframes delayHtml {
