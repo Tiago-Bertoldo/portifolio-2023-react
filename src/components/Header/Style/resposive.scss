@@ -1,9 +1,45 @@
 @media screen and (max-width : 800px) {
-    .container-menu-nav {
-       ul {
-            border: 1px solid red;
-            display: none !important;
-       }
-
+    header {
+        .container-menu-nav {
+            ul {
+                width: 50% !important;
+                top: 0;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.344);
+                justify-content: flex-start  ;
+                position: absolute;
+                padding: 0 !important;
+                margin: 0 !important;
+                flex-direction: column;
+                z-index: 100000;
+                backdrop-filter: blur(10px);
+                transform: translateX(-400px);
+                transition: all 1s ease;
+                li {
+                    margin-top: 4em;
+                }
+                
+            }
+        }
+            
     }
+    
+
+    .container-burguer-btn{
+        display: block;
+    }
+    
 }
+
+// width: 50% !important;
+// height: 100vh;
+// border: 1px solid green;
+// background-color: rgba(0, 0, 0, 0.344);
+// justify-content: flex-start  ;
+// position: absolute;
+// padding: 0 !important;
+// margin: 0 !important;
+// flex-direction: column;
+// z-index: 100000;
+// padding-top: 3em !important;
+// backdrop-filter: blur(10px);

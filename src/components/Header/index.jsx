@@ -4,9 +4,23 @@ import  moveEffect from '../Header/assets/coverr-coding-technology-5974-1080p.mp
 import imgProfil from '../Header/assets/img-profil.png'
 import { AiFillLinkedin } from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai'
+import { useState } from 'react';
 
 
 export default  function Header() {
+     const [activeBurguer , setActiveburguer] = useState(false)
+     
+     const handleActiveBurguer = () => {
+          activeBurguer ? setActiveburguer(false) : setActiveburguer(true)  ; 
+          let activeBurguerEffect = document.querySelector('.container-menu-nav ul')
+          activeBurguerEffect.classList.toggle('active-menu-responsive')
+          
+     }
+     
+
+
+     console.log(activeBurguer);
+
     return (
        <header id='header'>
           <div className="container-movie">
@@ -16,13 +30,12 @@ export default  function Header() {
           </div>
           <div className="container-header">
               <nav className='container-menu-nav'>
-                    <div className="container-burguer-btn">
+                    <div onClick={() => handleActiveBurguer()} className="container-burguer-btn">
                          <div className="burguer"></div>
                          <div className="burguer"></div>
                          <div className="burguer"></div>
                     </div>
-                    <ul>
-                        
+                    <ul className='teste'>
                          <li>
                               <a href="#header">Home</a>
                          </li>
