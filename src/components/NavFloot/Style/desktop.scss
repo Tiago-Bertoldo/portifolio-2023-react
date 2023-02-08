@@ -6,12 +6,18 @@
     top: 8em;
     position: fixed;
     z-index: 20000000;
+    animation: delayHtml 3s ease;
     ul {
         display: none;
         flex-direction: column;
         list-style: none;
         padding: 1em;
         z-index: 10000000;
+        animation: delayHtml 3s ease;
+        position: relative;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 auto;
         li{
             display: flex;
             align-items: center;
@@ -38,14 +44,26 @@
     .line-charge-menu {
         top: 3em;
         height: 17em;
-        border: 1px solid black;
+        width: 2px;
+        background-color:$color-btn;
         position: absolute;
-        left: 2.5em;
         z-index: -1;
         display: none;
+        animation: delayHtml 4s ease;
+        .line-charge-effectived {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background-color:rgb(238, 251, 238);
+            z-index: -1;
+            height: 5em;
+        }
     }
     .active-aside-menu {
-        display: block;
+        display: flex;
+        align-items: center;
     }
 }
 

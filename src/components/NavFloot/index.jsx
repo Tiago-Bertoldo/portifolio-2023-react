@@ -17,14 +17,44 @@ export default function NavFloot(){
                 return
             }
         });
-    })    
+    }) 
+
+    useEffect(()=>{
+        document.addEventListener('click' , e => {
+            let lineEffectBar = document.querySelector('.line-charge-effectived')
+            const el = e.target;
+            switch (el.text) {
+                case 'H':
+                    console.log('H')
+                    lineEffectBar.style.height = '150px';
+                    break;
+                case 'C':
+                    console.log('C')
+                    break; 
+                case 'P':
+                    console.log('P')
+                    break; 
+                case 'À':
+                    console.log('À')
+                    break; 
+                case 'CT':
+                    console.log('CT')
+                    break; 
+                default:
+                    break;
+            }
+        })
+    })
+       
     
     return (
         <>
-            <aside id="aside">
-                <div className="line-charge-menu"></div>
-                    <ul>
-                         <li class='active-menu'>
+            <aside id="aside" className='aside-bar-effect'>
+                    <ul >
+                        <div className="line-charge-menu">
+                            <div className="line-charge-effectived"></div>
+                        </div>
+                         <li className='active-menu'>
                               <a href="#header">H</a>
                          </li>
                          <li>
