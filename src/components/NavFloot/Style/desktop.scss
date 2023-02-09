@@ -7,6 +7,7 @@
     position: fixed;
     z-index: 20000000;
     animation: delayHtml 3s ease;
+    border: transparent;
     ul {
         display: none;
         flex-direction: column;
@@ -15,60 +16,84 @@
         z-index: 10000000;
         animation: delayHtml 3s ease;
         position: relative;
+        border: transparent;
         justify-content: center;
         justify-items: center;
         margin: 0 auto;
+        text-align: center;
         li{
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $backgroundColor-blue;
-            width: 2em;
-            height: 2em;
+            width: 1.3em;
+            height: 1.3em;
             border-radius: 50%;
             margin-top: 1em;
             z-index: 10000000;
+            position: relative;
+            .background-charge-menu {
+                z-index: -5;
+                position: absolute;
+                background-color: $backgroundColor-blue;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 50%;
+                transition: all 2s ease !important; 
+                text-align: center;
+            }
             a {
+                text-align: center;
                 color: $text-color;
                 text-decoration: none;
                 font-style: normal;
                 font-weight: 500;
-                font-size: 13px;
+                font-size: 7px;
                 line-height: 16px;
-                padding: 15px 15px;
+                padding: 1em 1em;
             }
         }
         .active-menu{
             transition: opacity 1s all;
             background-color: $color-btn;
+            border: transparent;
         }
     }
     .line-charge-menu {
-        top: 3em;
-        height: 13em;
-        width: 2px;
-        background-color:$color-btn;
+        top: 2em;
+        height: 10em;
+        width: 1.3px;
+        background-color:$backgroundColor-blue;
         position: absolute;
         z-index: -1;
         display: none;
         animation: delayHtml 4s ease;
+        border: transparent;
         .line-charge-effectived {
-            top: 1em;
+            top: 1.3em;
             left: 0;
             right: 0;
             bottom: 0;
             position: absolute;
-            background-color:rgb(238, 251, 238);
+            background-color: $color-btn;
             z-index: -1;
-            height: 10px;
+            height: 8px;
             transform-origin: top;
             transform: scaleY(5);
             transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+            border: transparent;
         }
     }
     .active-aside-menu {
         display: flex;
         align-items: center;
+    }
+    .active-boll-bar {
+       background-color: $color-btn !important;
+       opacity: 1;
     }
 }
 

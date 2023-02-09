@@ -6,8 +6,8 @@ export default function NavFloot(){
         window.addEventListener('scroll' , e =>{
             let getScrollHeight = window.pageYOffset
             console.log(getScrollHeight)
+            let getElementBollCharge = document.querySelectorAll('.background-charge-menu')
             let lineEffectBar = document.querySelector('.line-charge-effectived')
-            let bollEffectBar = document.querySelectorAll('.aside-bar-effect li')
             let getElementUl = document.querySelector('#aside ul')
             let getElementBar = document.querySelector('.line-charge-menu')
             if(getScrollHeight >= 350){
@@ -18,52 +18,36 @@ export default function NavFloot(){
                 getElementBar.classList.remove('active-aside-menu')
             }
 
+            if(getScrollHeight >= 400) {
+                getElementBollCharge[0].classList.add('active-boll-bar')
+                getElementBollCharge[1].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(2)';
+            }else {
+                getElementBollCharge[1].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 800) {
+                getElementBollCharge[2].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(8)';
+            }else {
+                getElementBollCharge[2].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 1000) {
+                getElementBollCharge[3].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(13)';
+            }else {
+                getElementBollCharge[3].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 1200) {
+                getElementBollCharge[4].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(18)';
+            }else {
+                getElementBollCharge[4].classList.remove('active-boll-bar')
+            }
+            return;
+
         });
     }) 
-
-    useEffect(()=>{
-        document.addEventListener('click' , e => {
-            let lineEffectBar = document.querySelector('.line-charge-effectived')
-            let bollEffectBar = document.querySelectorAll('.aside-bar-effect li')
-            const el = e.target;
-            switch (el.text) {
-                case 'H':
-                    lineEffectBar.style.transform = 'scaleY(2)';
-                    bollEffectBar[0].style.backgroundColor = '#678983';
-                    bollEffectBar[1].style.backgroundColor = '#181D31';
-                    bollEffectBar[2].style.backgroundColor = '#181D31';
-                    bollEffectBar[3].style.backgroundColor = '#181D31';
-                    bollEffectBar[4].style.backgroundColor = '#181D31';
-                    
-                    break;
-                case 'C':
-                    lineEffectBar.style.transform = 'scaleY(2)';
-                    bollEffectBar[1].style.backgroundColor = '#678983';
-                    bollEffectBar[2].style.backgroundColor = '#181D31';
-                    bollEffectBar[3].style.backgroundColor = '#181D31';
-                    bollEffectBar[4].style.backgroundColor = '#181D31';
-                    break; 
-                case 'P':
-                    lineEffectBar.style.transform = 'scaleY(8)';
-                    bollEffectBar[2].style.backgroundColor = '#678983';
-                    bollEffectBar[3].style.backgroundColor = '#181D31';
-                    bollEffectBar[4].style.backgroundColor = '#181D31';
-                    break; 
-                case 'À':
-                    lineEffectBar.style.transform = 'scaleY(13)';
-                    bollEffectBar[3].style.backgroundColor = '#678983';
-                    bollEffectBar[4].style.backgroundColor = '#181D31';
-                    break; 
-                case 'CT':
-                    lineEffectBar.style.transform = 'scaleY(17)';
-                    bollEffectBar[4].style.backgroundColor = '#678983';
-                    break; 
-                default:
-                    break;
-            }
-        })
-    })
-       
+ 
     
     return (
         <>
@@ -73,18 +57,23 @@ export default function NavFloot(){
                             <div className="line-charge-effectived"></div>
                         </div>
                          <li className='active-menu'>
+                              <div className="background-charge-menu"></div>
                               <a href="#header">H</a>
                          </li>
                          <li>
+                              <div className="background-charge-menu"></div>
                               <a href="#competences">C</a>
                          </li>
                          <li>
+                            <div className="background-charge-menu"></div>
                               <a href="#portifolio">P</a>
                          </li>
                          <li>
+                         <div className="background-charge-menu"></div>
                               <a href="#apropos">À</a>
                          </li>
                          <li>
+                         <div className="background-charge-menu"></div>
                               <a href="#contact">CT</a>
                          </li>
                     </ul>
