@@ -23,8 +23,8 @@
             align-items: center;
             justify-content: center;
             background-color: $backgroundColor-blue;
-            width: 3em;
-            height: 3em;
+            width: 2em;
+            height: 2em;
             border-radius: 50%;
             margin-top: 1em;
             z-index: 10000000;
@@ -35,15 +35,17 @@
                 font-weight: 500;
                 font-size: 13px;
                 line-height: 16px;
+                padding: 15px 15px;
             }
         }
         .active-menu{
+            transition: opacity 1s all;
             background-color: $color-btn;
         }
     }
     .line-charge-menu {
         top: 3em;
-        height: 17em;
+        height: 13em;
         width: 2px;
         background-color:$color-btn;
         position: absolute;
@@ -51,14 +53,17 @@
         display: none;
         animation: delayHtml 4s ease;
         .line-charge-effectived {
-            top: 0;
+            top: 1em;
             left: 0;
             right: 0;
             bottom: 0;
             position: absolute;
             background-color:rgb(238, 251, 238);
             z-index: -1;
-            height: 5em;
+            height: 10px;
+            transform-origin: top;
+            transform: scaleY(5);
+            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
         }
     }
     .active-aside-menu {

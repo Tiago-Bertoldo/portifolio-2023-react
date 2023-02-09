@@ -5,40 +5,58 @@ export default function NavFloot(){
     useEffect(()=>{
         window.addEventListener('scroll' , e =>{
             let getScrollHeight = window.pageYOffset
+            console.log(getScrollHeight)
+            let lineEffectBar = document.querySelector('.line-charge-effectived')
+            let bollEffectBar = document.querySelectorAll('.aside-bar-effect li')
             let getElementUl = document.querySelector('#aside ul')
             let getElementBar = document.querySelector('.line-charge-menu')
             if(getScrollHeight >= 350){
                 getElementUl.classList.add('active-aside-menu')
                 getElementBar.classList.add('active-aside-menu')
-                return
             }else if (getScrollHeight <= 350) {
                 getElementUl.classList.remove('active-aside-menu')
                 getElementBar.classList.remove('active-aside-menu')
-                return
             }
+
         });
     }) 
 
     useEffect(()=>{
         document.addEventListener('click' , e => {
             let lineEffectBar = document.querySelector('.line-charge-effectived')
+            let bollEffectBar = document.querySelectorAll('.aside-bar-effect li')
             const el = e.target;
             switch (el.text) {
                 case 'H':
-                    console.log('H')
-                    lineEffectBar.style.height = '150px';
+                    lineEffectBar.style.transform = 'scaleY(2)';
+                    bollEffectBar[0].style.backgroundColor = '#678983';
+                    bollEffectBar[1].style.backgroundColor = '#181D31';
+                    bollEffectBar[2].style.backgroundColor = '#181D31';
+                    bollEffectBar[3].style.backgroundColor = '#181D31';
+                    bollEffectBar[4].style.backgroundColor = '#181D31';
+                    
                     break;
                 case 'C':
-                    console.log('C')
+                    lineEffectBar.style.transform = 'scaleY(2)';
+                    bollEffectBar[1].style.backgroundColor = '#678983';
+                    bollEffectBar[2].style.backgroundColor = '#181D31';
+                    bollEffectBar[3].style.backgroundColor = '#181D31';
+                    bollEffectBar[4].style.backgroundColor = '#181D31';
                     break; 
                 case 'P':
-                    console.log('P')
+                    lineEffectBar.style.transform = 'scaleY(8)';
+                    bollEffectBar[2].style.backgroundColor = '#678983';
+                    bollEffectBar[3].style.backgroundColor = '#181D31';
+                    bollEffectBar[4].style.backgroundColor = '#181D31';
                     break; 
                 case 'À':
-                    console.log('À')
+                    lineEffectBar.style.transform = 'scaleY(13)';
+                    bollEffectBar[3].style.backgroundColor = '#678983';
+                    bollEffectBar[4].style.backgroundColor = '#181D31';
                     break; 
                 case 'CT':
-                    console.log('CT')
+                    lineEffectBar.style.transform = 'scaleY(17)';
+                    bollEffectBar[4].style.backgroundColor = '#678983';
                     break; 
                 default:
                     break;
@@ -64,7 +82,7 @@ export default function NavFloot(){
                               <a href="#portifolio">P</a>
                          </li>
                          <li>
-                              <a href="#aproros">À</a>
+                              <a href="#apropos">À</a>
                          </li>
                          <li>
                               <a href="#contact">CT</a>
