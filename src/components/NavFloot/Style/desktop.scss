@@ -1,13 +1,12 @@
 @import '../../variables';
 #aside {
-    width: 15%;
+    width: 1%;
     margin: 0;
     padding: 0;
     top: 8em;
     position: fixed;
     z-index: 20000000;
     animation: delayHtml 3s ease;
-    border: transparent;
     ul {
         display: none;
         flex-direction: column;

@@ -31,7 +31,7 @@ export default  function Header() {
                          <div className="burguer line2" ></div>
                          <div className="burguer line3"></div>
                     </div>
-                    <ul className='teste'>
+                    <ul>
                          <li>
                               <a href="#header">Home</a>
                          </li>
@@ -61,7 +61,7 @@ export default  function Header() {
                               </div>
                               <div className="container-info-header__text-apresentation">
                                    <p>Hello World , je suis</p>
-                                   <p>Tiago Bertoldo</p>
+                                   <h2>Tiago Bertoldo</h2>
                                    <p>Front End Developpeur</p>
                                    <div className="container-info-header__btn-download">
                                    <ul>

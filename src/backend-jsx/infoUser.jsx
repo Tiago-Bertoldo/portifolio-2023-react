@@ -13,50 +13,51 @@ export const userCompetences = [
     },
     {
         "id" : "20202",
-        "title" : "QWUERO COMER SEU CU",
+        "title" : "WEB RESPONSIVE",
         "competences": [
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
+            "Augmenter la vitesse d'un site.",
+            "La mise en forme avec CSS3, LASS , SASS.",
+            "Agencer le contenu des pages.",
+            "Utiliser des fonctionnalités avancées de HTML et CSS.",
+            "Creation des animations dynamiques.",
+            "Techniques avancées de Sass.",
         ]
     },
     {
         "id" : "20203",
-        "title" : "SEO",
+        "title" : "CYBER SECURITY",
         "competences": [
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
+            "Identifier les principales attaques web et les règles de sécurité à adopter.",
+            "Protéger du code avec l'OWASP.",
+            "Tester et appliquer l'OWASP.",
+            "Utilisez des références d'objet indirectes avec des paramètres et des combinaisons clé-valeur.",
         ]
     },    {
         "id" : "20204",
-        "title" : "SEO",
+        "title" : "DATA BASE ANALISY",
         "competences": [
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
+            "Creation de une API REST avec Node, Express et MongoDB.",
+            "Creation de un serveur web avec Express.",
+            "Gérer des fichiers utilisateur sur une application Express.",
+            "Système d'authentification sur une application Express.",
         ]
     },
     {
         "id" : "20205",
-        "title" : "SEO",
+        "title" : "WEB ACCESSIBILITY",
         "competences": [
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
+            "Comprendre ce qu'est l'inclusion numérique.",
+            "Èvaluer les obstacles à l'accessibilité sur le Web.",
+            "Concevoir des contenus web accessibles.",
+            "Corriger des erreurs techniques sur votre site afin d'améliorer sa crawlabilité.",
         ]
     },    {
         "id" : "20206",
-        "title" : "SEO",
+        "title" : "API CREATE",
         "competences": [
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
-            "Um dois tres",
+            "Utiliser des API REST pour vos projets de code.",
+            "Formuler des requêtes et envoyer des réponses avec une API REST.",
+            "Creation des API REST.",
         ]
     }
 ]
