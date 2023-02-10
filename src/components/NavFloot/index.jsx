@@ -5,7 +5,6 @@ export default function NavFloot(){
     useEffect(()=>{
         window.addEventListener('scroll' , e =>{
             let getScrollHeight = window.pageYOffset
-            console.log(getScrollHeight)
             let getElementBollCharge = document.querySelectorAll('.background-charge-menu')
             let lineEffectBar = document.querySelector('.line-charge-effectived')
             let getElementUl = document.querySelector('#aside ul')
