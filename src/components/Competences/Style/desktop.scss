@@ -49,8 +49,10 @@
             border-radius: 10px;
             margin: 2em auto;
             h2{
+                margin-top: 1.5em;
                 text-align: center;
-                font-size: 18px;
+                font-size: 16px;
+                font-weight: bold;
             }
         }&__info-user{
             width: 100%;
@@ -65,7 +67,7 @@
                 align-items: flex-start;
                 margin: 0em 1em 0 0 ;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 20px;
             }
         }

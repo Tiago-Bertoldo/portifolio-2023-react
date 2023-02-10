@@ -4,7 +4,9 @@ import './Style/responsive.scss'
 export default function Apropos () {
     return (
         <div id="apropos">
-            <h2>Hello World</h2>
+            <section className="container-apropos">
+                <h2>Hello</h2>
+            </section>
         </div>
     )
 }

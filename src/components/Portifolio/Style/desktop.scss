@@ -1,7 +1,120 @@
+
+@import '../../variables';
+
 #portifolio {
-    margin: 0;
-    padding: 0;
     width: 100%;
-    height: 400px;
-    background-color: blue;
+    min-height: 500px;
+    margin: 0 auto;
+    background-color: $backgroundColor-blue;
+    .portifolio-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: $backgroundColor-bege;
+        }
+        p{
+            margin-top: -7px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 24px;
+            text-align: center;
+            color: rgb(223, 218, 218);
+        }
+    }
+    .portifolio-container {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .portifolio-blocks{ 
+        width: 100%;
+        max-width: 1240px;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 2em;
+        flex-wrap: wrap;
+        &__boxs{
+            width: 30%;
+            min-width: 300px;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            background-color: $backgroundColor-bege;
+            color: $backgroundColor-blue;
+            box-shadow: 0px 4px 4px rgba(239, 237, 237, 0.381);
+            border-radius: 10px;
+            margin: 2em auto;
+            position: relative;
+            .btn-nav-link{
+                height: 19%;
+                display: flex;
+                width: 100%;
+                bottom: 0em;
+                position: absolute;
+                z-index: 9000;
+                justify-content:space-around;
+                a{
+                    color: $backgroundColor-blue;
+                    display: flex;
+                    font-size: 20px;
+                    border: 1px solid black;
+                    background-color: rgb(186, 181, 181);
+                    border-radius: 50%;
+                    align-items: center;
+                }
+            }
+            h2{
+                text-align: center;
+                font-size: 18px;
+            }
+        }&__info-user{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            position: absolute;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.7s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+            ul{
+                margin: 1em 0 0 0 ;
+            }
+            p {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0em 1em 0 0 ;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 10px;
+            }
+        }
+        .portifolio-img{
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+
 }
+
