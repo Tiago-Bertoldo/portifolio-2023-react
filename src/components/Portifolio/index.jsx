@@ -14,14 +14,14 @@ export default function Portifolio () {
                 </div>
             <div className="portifolio-blocks">
                     {infoProjet.map((portifolioProjet , index) => (
-                        <div className="portifolio-blocks__boxs">
+                        <div className="portifolio-blocks__boxs" key={index}>
                             <h2>{portifolioProjet.nom}</h2>
                             <div className="portifolio-img">
                                 <img src={portifolioProjet.urlImg} alt={portifolioProjet.altImg} />
                             </div>
                             <div className="portifolio-blocks__info-user">
                                 {portifolioProjet.tecnologie.map((maxCompetences , index) => (
-                                    <ul className='teconologie-ul'>
+                                    <ul className='teconologie-ul' key={index}>
                                         <li>
                                             <p>{maxCompetences}</p>
                                         </li>
@@ -30,10 +30,16 @@ export default function Portifolio () {
                                 ))}
                                 
                             </div>
-                            <div className="btn-nav-link">
-                                <a href={portifolioProjet.url}><CgWebsite/></a>
-                                <a href={portifolioProjet.github}><FaGithubSquare/></a>
-                            </div>
+                            <aside className="btn-nav-link">
+                                <div className="btn-nav-link__left">
+                                    <a href={portifolioProjet.url} target='_blank' rel='noreferrer'><CgWebsite/></a>
+                                </div>
+                                <div className="btn-nav-link__right">
+                                    <a href={portifolioProjet.github} target='_blank' rel='noreferrer'><FaGithubSquare/></a>
+                                </div>
+                                
+                              
+                            </aside>
                     </div>
                         
                     ))}
