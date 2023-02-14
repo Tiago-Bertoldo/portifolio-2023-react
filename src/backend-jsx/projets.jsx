@@ -63,21 +63,21 @@ export const infoProjet = [
         "background":"https://www.google.com"
     },
     {
-        "id":"202301",
-        "nom":"KASA",
+        "id":"202305",
+        "nom":"PANTHÈRE",
         "tecnologie": [
-            "Intégration (X)HTML - CSS ",
-            "Integration React.js",
+            "Réaliser une recherche des bonnes pratiques en développement web",
+            "Assurer l'accessibilité d'un site web",
             "Conception graphique & Webdesign (Figma)",
             "Dynamise / Animation des pages par JavaScript",
-            "Référencement naturel SEO",
-            "Optimisation AMP (PageSpeed)",
-            "Site Responsive (compatible tous supports)"
+            "Optimiser le référencement d'un site web",
+            "OÉcrire un code HTML et CSS maintenable",
+            "Optimiser la taille et la vitesse d’un site web"
         ],
-        "url" : "https://www.thbertoldo.tech",
+        "url" : "https://thbertoldo.tech/panther",
         "github" : "https://github.com/Tiago-Bertoldo",
         "urlImg" : "https://thbertoldo.tech/my_imgs/ksaa.png",
-        "altImg" : "Projet kasa creer en 2020",
+        "altImg" : "Projet panthère creer en 2020",
         "background":"https://www.google.com"
     },
     {
