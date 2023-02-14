@@ -96,11 +96,11 @@
             position: absolute;
             z-index: 2000;
             backdrop-filter: blur(5px);
-            height: 100%;
             text-align: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.7s ease-in-out;
+            height: 20em;
             &:hover {
                 opacity: 1;
             }
@@ -111,10 +111,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                text-align: start;
                 margin: 0em 1em 0 0 ;
                 font-weight: 500;
-                font-size: 14px;
-                line-height: 10px;
+                font-size: 12px;
+                line-height: 16px;
             }
         }
         .portifolio-img{

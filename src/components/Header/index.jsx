@@ -66,10 +66,10 @@ export default  function Header() {
                                    <div className="container-info-header__btn-download">
                                    <ul>
                                         <li>
-                                             <a href="#cv">Download CV</a>
+                                             <a href="https://drive.google.com/file/d/1u9E4KMqOXSO1h7jH4hkGq1TxuQbI4Jyr/view">Download CV</a>
                                         </li>
                                         <li>
-                                             <a href="cv">Contact</a>
+                                             <a href="#contact">Contact</a>
                                         </li>
                                    </ul>
                               </div>
