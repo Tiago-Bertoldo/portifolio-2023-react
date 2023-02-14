@@ -88,7 +88,7 @@ export const infoProjet = [
             "Stocker des données de manière sécurisée",
             "Implémenter un modèle logique de données conformément à la réglementation",
         ],
-        "url" : "https://www.thbertoldo.tech/sauces",
+        "url" : "https://thbertoldo.tech/hot-takes/",
         "github" : "https://github.com/Tiago-Bertoldo/backend-pj-07",
         "urlImg" : "https://thbertoldo.tech/my_imgs/sauces.png",
         "altImg" : "Projet hot-takes creer en 2020",
