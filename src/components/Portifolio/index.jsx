@@ -3,8 +3,29 @@ import './Style/responsive.scss'
 import { CgWebsite } from 'react-icons/cg';
 import { FaGithubSquare } from 'react-icons/fa';
 import {infoProjet} from '../../backend-jsx/projets'
+import { useEffect , useState} from 'react';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 
 export default function Portifolio () {
+    const [portifolioQuantite , setPortifolioQuantite] = useState(6);
+        let useInfoPortifolio = infoProjet.slice(0, portifolioQuantite)
+        let getBtnChange = document.querySelector('.btn-reload')
+
+        useEffect(() => {
+                if(portifolioQuantite >=  infoProjet.length){
+                    console.log('Executei')
+                    getBtnChange.classList.toggle('effect-turn')
+                }
+       })
+
+    const hundleSetQuantite = () => {
+        if(portifolioQuantite <=  infoProjet.length - 1) {
+            setPortifolioQuantite( portifolioQuantite +3)
+        }else {
+            setPortifolioQuantite(6)
+            getBtnChange.classList.remove('effect-turn')
+        }
+    }
     return (
         <div id="portifolio">
             <section className="portifolio-container ">
@@ -13,7 +34,7 @@ export default function Portifolio () {
                     <p>Une partie des projets sur lesquels j'ai travaillé</p>
                 </div>
             <div className="portifolio-blocks">
-                    {infoProjet.map((portifolioProjet , index) => (
+                    {useInfoPortifolio.map((portifolioProjet , index) => (
                         <div className="portifolio-blocks__boxs" key={index}>
                             <h2>{portifolioProjet.nom}</h2>
                             <div className="portifolio-img">
@@ -43,7 +64,13 @@ export default function Portifolio () {
                     </div>
                         
                     ))}
-                </div>        
+                </div>   
+                <div className="container-btn-reload">
+                    <div className="btn-round">
+                         <button className='btn-reload' onClick={()=> hundleSetQuantite() }> <BsFillArrowDownCircleFill/></button>
+                    </div>
+                   
+                </div>     
             </section>
         </div>
     )

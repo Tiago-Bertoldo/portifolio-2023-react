@@ -10,11 +10,11 @@ export default function Competences () {
             <div className="competences-container">
                 <div className="competences-blocks">
                     {userCompetences.map((competencesUser , index) => (
-                        <div className="competences-blocks__boxs">
+                        <div className="competences-blocks__boxs" key={index}>
                             <h2>{competencesUser.title}</h2>
                             <div className="competences-blocks__info-user">
                                 {competencesUser.competences.map((maxCompetences , index) => (
-                                    <ul>
+                                    <ul key={index}>
                                         <li>
                                             <p>{maxCompetences}</p>
                                         </li>

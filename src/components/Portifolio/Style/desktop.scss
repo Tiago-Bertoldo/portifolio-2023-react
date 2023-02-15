@@ -125,5 +125,40 @@
             justify-content: center;
         }
     }
+    .container-btn-reload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 5em;
+        position: relative;
+        .btn-round {
+            width: 120px;
+            height: 120px;
+            background-color: $backgroundColor-blue;
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0em;
+            border-radius: 50%;
+        }
+        .btn-reload {
+            position: relative;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: transparent;
+            font-size: 3em;
+            color: $backgroundColor-bege;       
+            cursor: pointer;
+        }
+        .effect-turn {
+            transform: rotateX(180deg) !important;
+        }
+    }
 }
 
