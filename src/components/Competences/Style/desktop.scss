@@ -1,17 +1,10 @@
 @import '../../variables';
-
+@import '../../mixirs';
 
 #competences {
-    width: 100%;
-    min-height: 500px;
-    margin: 0 auto;
-    background-color: $backgroundColor-bege;
+    @include container-start($backgroundColor-bege);
     .competences-container {
-        width: 100%;
-        max-width: 1240px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+        @include container-responsive()
     }
     .shape-curved{
         width: 40%;

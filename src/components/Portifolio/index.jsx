@@ -12,11 +12,14 @@ export default function Portifolio () {
         let getBtnChange = document.querySelector('.btn-reload')
 
         useEffect(() => {
-                if(portifolioQuantite >=  infoProjet.length){
-                    console.log('Executei')
-                    getBtnChange.classList.toggle('effect-turn')
-                }
+                hundleSetEffect();
        })
+
+    const hundleSetEffect = () =>{
+        if(portifolioQuantite >=  infoProjet.length){
+            getBtnChange.classList.toggle('effect-turn')
+        }
+    }
 
     const hundleSetQuantite = () => {
         if(portifolioQuantite <=  infoProjet.length - 1) {

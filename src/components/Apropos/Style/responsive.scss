@@ -1,0 +1,16 @@
+@media screen and (max-width:1230px){
+    .apropos__articles{
+        &__right{
+            border: transparent !important;
+        }        
+    }
+}
+
+@media screen and (max-width:820px){
+    .apropos__articles{
+        &__center{
+            border: transparent !important;
+            min-height: 10em !important;
+        }        
+    }
+}
