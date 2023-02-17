@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    min-height: 500px;
     background-color: $color;
 }
 
@@ -13,4 +14,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@mixin container-headerh2($color){
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $color;
+}
+
+@mixin container-header-p($color) {
+            margin-top: -7px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 24px;
+            text-align: center;
+            color: $color;
 }

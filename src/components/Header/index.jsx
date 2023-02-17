@@ -56,7 +56,7 @@ export default  function Header() {
                                         <a href="https://www.linkedin.com/in/tiago-bertoldo-6021a61a8/" target="_blank" rel='noreferrer'><AiFillLinkedin/></a>
                                    </span>
                                    <span>
-                                        <a href="https://github.com/sadberto" target="_blank" rel='noreferrer'><AiFillGithub/></a>
+                                        <a href="https://github.com/tiago-bertoldo" target="_blank" rel='noreferrer'><AiFillGithub/></a>
                                    </span>
                               </div>
                               <div className="container-info-header__text-apresentation">
@@ -66,7 +66,7 @@ export default  function Header() {
                                    <div className="container-info-header__btn-download">
                                    <ul>
                                         <li>
-                                             <a href="https://drive.google.com/file/d/1u9E4KMqOXSO1h7jH4hkGq1TxuQbI4Jyr/view">Download CV</a>
+                                             <a href="https://drive.google.com/file/d/1u9E4KMqOXSO1h7jH4hkGq1TxuQbI4Jyr/view" target="_blank" rel='noreferrer'>Download CV</a>
                                         </li>
                                         <li>
                                              <a href="#contact">Contact</a>
