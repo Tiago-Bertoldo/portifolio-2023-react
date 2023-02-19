@@ -2,7 +2,16 @@ import './Style/responsive.scss'
 import './Style/desktop.scss'
 import { useEffect } from 'react'
 export default function NavFloot(){
+    let getScrollWeigh = window.innerWidth
     useEffect(()=>{
+        if(getScrollWeigh >= 887 ){
+            hundleBarDesktop();
+        }else {
+            hundleBarMobile();
+        }
+    },[getScrollWeigh]) 
+
+    const hundleBarDesktop = () =>{
         window.addEventListener('scroll' , e =>{
             let getScrollHeight = window.pageYOffset
             let getElementBollCharge = document.querySelectorAll('.background-charge-menu')
@@ -24,19 +33,19 @@ export default function NavFloot(){
             }else {
                 getElementBollCharge[1].classList.remove('active-boll-bar')
             }
-            if(getScrollHeight >= 800) {
+            if(getScrollHeight >= 1320) {
                 getElementBollCharge[2].classList.add('active-boll-bar')
                 lineEffectBar.style.transform = 'scaleY(8)';
             }else {
                 getElementBollCharge[2].classList.remove('active-boll-bar')
             }
-            if(getScrollHeight >= 1000) {
+            if(getScrollHeight >= 2300) {
                 getElementBollCharge[3].classList.add('active-boll-bar')
                 lineEffectBar.style.transform = 'scaleY(13)';
             }else {
                 getElementBollCharge[3].classList.remove('active-boll-bar')
             }
-            if(getScrollHeight >= 1200) {
+            if(getScrollHeight >= 2500) {
                 getElementBollCharge[4].classList.add('active-boll-bar')
                 lineEffectBar.style.transform = 'scaleY(18)';
             }else {
@@ -45,7 +54,52 @@ export default function NavFloot(){
             return;
 
         });
-    }) 
+    };
+
+    const hundleBarMobile = ()=>{
+        window.addEventListener('scroll' , e =>{
+            let getScrollHeight = window.pageYOffset
+            let getElementBollCharge = document.querySelectorAll('.background-charge-menu')
+            let lineEffectBar = document.querySelector('.line-charge-effectived')
+            let getElementUl = document.querySelector('#aside ul')
+            let getElementBar = document.querySelector('.line-charge-menu')
+            if(getScrollHeight >= 350){
+                getElementUl.classList.add('active-aside-menu')
+                getElementBar.classList.add('active-aside-menu')
+            }else if (getScrollHeight <= 350) {
+                getElementUl.classList.remove('active-aside-menu')
+                getElementBar.classList.remove('active-aside-menu')
+            }
+
+            if(getScrollHeight >= 400) {
+                getElementBollCharge[0].classList.add('active-boll-bar')
+                getElementBollCharge[1].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(2)';
+            }else {
+                getElementBollCharge[1].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 2900) {
+                getElementBollCharge[2].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(8)';
+            }else {
+                getElementBollCharge[2].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 5600) {
+                getElementBollCharge[3].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(13)';
+            }else {
+                getElementBollCharge[3].classList.remove('active-boll-bar')
+            }
+            if(getScrollHeight >= 6100) {
+                getElementBollCharge[4].classList.add('active-boll-bar')
+                lineEffectBar.style.transform = 'scaleY(18)';
+            }else {
+                getElementBollCharge[4].classList.remove('active-boll-bar')
+            }
+            return;
+
+        });
+    }
  
     
     return (

@@ -10,7 +10,7 @@ export default function Apropos () {
             </section>
             <article className='apropos__articles'>
                     <div className="apropos__articles__left">
-                        <h2>Un développeur web passionné</h2>
+                            <h2>Un développeur web passionné</h2>
                             <p>Passionné par la technologie depuis mon enfance, j’ai toujours été quelqu'un de dévoué à l’apprentissage. J’ai appris avec la programmation à être une personne autodidacte et polyvalent</p>
                             <p>Actuellement en changement de voie professionnelle, je suis à la recherche de une première expérience en tant que programmeur Front End avec des expériences et des connaissances en technologie comme; Javascript , NodeJS, Sass, React et PHP, Symphony</p>
                     </div>

@@ -14,3 +14,27 @@
         }        
     }
 }
+
+@media screen and (max-width:385px){
+    .apropos__articles {
+        width: 320px !important;
+        flex-direction: column;
+        &__left , &__right , &__center{
+            min-width: 320px !important;
+            flex-direction: column;
+            padding: 0 !important;
+            p{
+                margin: 0 auto;
+                width: 260px !important;
+                font-size: 11px !important;
+            
+            }
+            h2{
+                width: 250px !important;
+                margin: 1em auto;
+                font-size: 17px;
+            }
+        }
+    }
+
+}

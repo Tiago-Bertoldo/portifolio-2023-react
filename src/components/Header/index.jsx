@@ -42,7 +42,7 @@ export default  function Header() {
                               <a href="#portifolio">Portifolio</a>
                          </li>
                          <li>
-                              <a href="#aproros">À propos</a>
+                              <a href="#apropos">À propos</a>
                          </li>
                          <li>
                               <a href="#contact">Contact</a>

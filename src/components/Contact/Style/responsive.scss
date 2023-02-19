@@ -1,0 +1,34 @@
+@media screen and (max-width:480px){
+    .container-form-footer__left{
+        width: 100% !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-right{
+        h2 {
+            font-size: 1rem;
+            text-align: center;
+        }
+        p{
+            font-size: 0.5rem !important;
+            text-align: center;
+            padding: 0 !important;
+            margin: -1.50em 0 0 0 !important;
+        }
+    }
+
+}
+@media screen and (max-width:375px){
+    .container-form-footer__right{
+        min-width: 0px !important;
+
+    }
+    .container-form-footer__left{
+        min-width: 0px !important;
+
+    }
+    .input-text-style {
+        width: 85% !important;
+    }
+
+}

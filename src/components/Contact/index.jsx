@@ -5,11 +5,10 @@ import { BiUser } from 'react-icons/bi';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillGithub } from 'react-icons/ai';
 import { BsFileEarmarkText } from 'react-icons/bs';
-
-
-
+import { useState } from 'react';
 
 export default function Contact () {
+
     return (
         <footer id="contact">
            <section className="container-footer">
@@ -28,7 +27,7 @@ export default function Contact () {
                             <label htmlFor="email">Email:</label>
                             <div className="style-input-icons">
                                 <label htmlFor="email"><MdAlternateEmail/></label>
-                                <input type="text" name="email" id="email" data-icon='30' className='input-text-style'/>
+                                <input type="email" name="email" id="email" data-icon='30' className='input-text-style'/>
                             </div>
                             <label htmlFor="subjet">Subjet:</label>
                             <textarea name="subjet" id="subjet" cols="30" rows="10"></textarea>
