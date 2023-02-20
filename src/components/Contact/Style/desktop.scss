@@ -3,6 +3,7 @@
 
 #contact {
     @include container-start($backgroundColor-blue);
+    position: relative;
     .container-footer {
         @include container-responsive();
         &__header {
@@ -143,9 +144,51 @@
                     color: $backgroundColor-blue;
           
                 }
+                &:disabled {
+                    background-color: gray;
+                    cursor:auto;
+                    &:hover {
+                        background-color: gray;
+                        border: 1px solid white;
+                        color:$backgroundColor-bege;
+                    }
+                }
             }
            
         }
     }
     
+}
+
+.error-name , .error-email , .error-message {
+    color: red;
+}
+
+.send-msg-sucess {
+    background-color: black;
+}
+
+.loading-scroll {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    background-color: $backgroundColor-bege;
+    z-index: 10000000000000000;
+    transform: translateX(-350px);
+    transition: all 0.4s ease-out;
+    border-radius: 10px;
+   
+}
+
+.active-scroll {
+    transform: translateX(0);
+}
+
+.check-styles {
+    padding: 0.50em;
+    color: green;
 }
