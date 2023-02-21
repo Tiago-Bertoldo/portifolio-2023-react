@@ -97,16 +97,15 @@ export const infoProjet = [
     ,
     {
         "id":"202306",
-        "nom":"HOT-TAKES",
+        "nom":"CORPORE",
         "tecnologie": [
-            "Mettre en œuvre des opérations CRUD de manière sécurisée",
-            "Stocker des données de manière sécurisée",
+            "Html et css avec javascript",
             "Implémenter un modèle logique de données conformément à la réglementation",
         ],
-        "url" : "https://thbertoldo.tech/hot-takes/",
-        "github" : "https://github.com/Tiago-Bertoldo/backend-pj-07",
+        "url" : "https://thbertoldo.tech/corpore/",
+        "github" : "https://github.com/Tiago-Bertoldo/corpore",
         "urlImg" : "https://thbertoldo.tech/my_imgs/sauces.png",
-        "altImg" : "Projet hot-takes creer en 2020",
+        "altImg" : "Projet Corpore creer en 2023",
         "background":"https://www.google.com"
     }
     

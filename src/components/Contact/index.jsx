@@ -14,59 +14,73 @@ export default function Contact () {
     const [userName , setName] = useState('')
     const [userEmail , setEmail] = useState('')
     const [userMsg, setMessage] = useState('')
+    const [isValidName , setIsValidName] = useState(false)
+    const [isValidEmail , setIsValidEmail] = useState(false)
+    const [isValidMessage , setIsValidMessage] = useState(false)
     const [isValid , setIsValid] = useState(false);
     const [isValidButton , setIsValidButton] = useState(true) ;
-    const [isEffectActived , setEffectActived] = useState(false)
-    const [isSecurity , setIsSecurity] = useState({
+
+
+    const isSecurity = {
         validEmail : RegExp(
             '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$'
          ),
          validName : RegExp(
             '[a-zA-Z0-9]+'
          ),
-    })
+    }
 
 
-
-    const handleCheckInput = () => {
+    const validName = () =>{
         let errorName = document.querySelector('.error-name')
-        let errorEmail = document.querySelector('.error-email')
-        let errorMessage = document.querySelector('.error-message')
-        
         if(userName.length >= 6 && isSecurity.validName.test(userName) ){
             errorName.innerHTML = ''
-            setIsValid(true)
+            return setIsValid(true)
         }else {
             errorName.innerHTML = 'Minimum 6 characters *'
         }
+    }
 
+    const validEmail = () =>{
+        let errorEmail = document.querySelector('.error-email')
         if(isSecurity.validEmail.test(userEmail) ){
             errorEmail.innerHTML = ''
-            setIsValid(true)
+            return setIsValid(true)
         }else {
             errorEmail.innerHTML = 'Voulez regardez les champ email *'
             setIsValid(false)
         }
+    }
+
+    const validMessage = () =>{
+        let errorMessage = document.querySelector('.error-message')
         if(userMsg === ''){
             errorMessage.innerHTML = 'Voulez regardez les champ message *'
-            setIsValid(false)
+            return setIsValid(true)
         }else {
             errorMessage.innerHTML = ''
-            setIsValid(true)           
+            setIsValid(false)           
         }
+    }
 
-        
+    useEffect(()=>{    
         if(isValid) {
             setIsValidButton(false)
         }else {
             setIsValidButton(true)
         }
-        
-    }
+        return;
+    },[isValid])
 
     useEffect(()=> {
-        if(isEffectActived){
-            handleCheckInput();
+        if(isValidName){
+            validName();
+        }
+        if(isValidEmail){
+            validEmail();
+        }
+        if(isValidMessage){
+            validMessage();
         }
         return;
     })
@@ -80,13 +94,13 @@ export default function Contact () {
         return;
     }
     
-     const setLoading = () => {
+    const setLoading = () => {
         getSpan.classList.add('active-scroll');
     }
-     const removeCarosel = () => {
+    const removeCarosel = () => {
         getSpan.classList.remove('active-scroll');
      }
-     const handleSetTimeOut = () => {
+    const handleSetTimeOut = () => {
         setTimeout(removeCarosel, 2000);
      }
 
@@ -106,8 +120,10 @@ export default function Contact () {
                 setMessage('')
                 setName('')
                 setIsValid(false)
+                setIsValidName(false);
+                setIsValidEmail(false)
+                setIsValidMessage(false)
                 handleSetTimeOut();
-                setEffectActived(false);
             })
             .catch((errr) => {
                 console.log('error ' , errr)
@@ -134,7 +150,7 @@ export default function Contact () {
                                 <label htmlFor="username"><BiUser/></label>
                                 <input type="text" name="username" id="username" data-icon='30' className='input-text-style'
                                 onChange={(e) => setName(e.target.value)}
-                                onClick={() => setEffectActived(true)}
+                                onClick={() => setIsValidName(true)}
                                 value={userName}
                                 />
                             </div>
@@ -145,7 +161,7 @@ export default function Contact () {
                                 <label htmlFor="email"><MdAlternateEmail/></label>
                                 <input type="email" name="email" id="email" data-icon='30' className='input-text-style border-email'
                                 onChange={(e) => setEmail(e.target.value)}
-                                onClick={() => setEffectActived(true)}
+                                onClick={() => setIsValidEmail(true)}
                                 value={userEmail}
                                 />
                             </div>
@@ -154,7 +170,7 @@ export default function Contact () {
                             <label htmlFor="subjet">Message:</label>
                             <textarea name="subjet" id="subjet" cols="30" rows="10"  className='border-message' 
                                 onChange={(e) => setMessage(e.target.value)}
-                                onClick={() => setEffectActived(true)}
+                                onClick={() => setIsValidMessage(true)}
                                 value={userMsg}>
                             </textarea>
                             <span className="error-message"></span>
